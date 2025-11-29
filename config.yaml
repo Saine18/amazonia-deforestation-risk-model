@@ -1,0 +1,23 @@
+project:
+  name: "Modelo Espacial de Risco de Desmatamento"
+  version: "1.0.0"
+  author: "Saine18"
+
+study_area:
+  name: "Amazônia Legal - Região Norte"
+  states: ["AC", "AM", "AP", "PA", "RO", "RR", "TO"]
+  crs: "EPSG:5880"
+
+spatial:
+  cell_size: 5000
+  rho: 20000
+
+temporal:
+  baseline_year: 2025
+  prediction_start: 2026
+  prediction_end: 2030
+
+model:
+  type: "xgboost"
+  n_iterations: 100
+  random_state: 42

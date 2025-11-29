@@ -1,0 +1,13 @@
+data/raw/*
+data/processed/*. tif
+data/processed/*.shp
+models/*.pkl
+outputs/maps/*.tif
+outputs/maps/*.png
+__pycache__/
+*.py[cod]
+. ipynb_checkpoints/
+venv/
+env/
+.env
+.DS_Store
