@@ -89,8 +89,9 @@ if PATH_GRID and PATH_GRID.exists():
     gdf_grid = gpd.read_file(PATH_GRID)
 else:
     print(f"⚠️  Grid base não encontrado. Gerando grid automático para a Região Norte...")
-    # Cria grid cobrindo a extensão das estações
-    bbox = box(-74.0, -14.0, -46.0, 6.0) # Extensão aprox. do Norte
+    # Cria grid cobrindo a extensão da Região Norte do Brasil
+    # Bounding box: lon(-74 a -46), lat(-14 a 6) - conforme especificação do projeto
+    bbox = box(-74.0, -14.0, -46.0, 6.0)
     gdf_bbox = gpd.GeoDataFrame({'geometry': [bbox]}, crs="EPSG:4326")
     
     # Projeção Cônica de Albers para América do Sul (métrica precisa)
