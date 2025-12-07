@@ -1,6 +1,9 @@
 data/raw/*
-data/processed/*. tif
+data/processed/*.tif
 data/processed/*.shp
+data/processed/clima/*.gpkg
+!data/processed/clima/.gitkeep
+!data/processed/grid/.gitkeep
 models/*.pkl
 outputs/maps/*.tif
 outputs/maps/*.png
